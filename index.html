@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            background-image: url('images/background.jpg');
+        }
+
+        #RoomLightsDiv {
+            display: none;
+            width: 100%;
+            padding: 30px 0;
+            background-color: rgba(127, 112, 135, 0.5);
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #DiscoLightsDiv {
+            display: none;
+            width: 100%;
+            padding: 30px 0;
+            background-color: rgba(115, 112, 135, 0.5);
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #bulb1Division {
+            display: none;
+            width: 100%;
+            padding: 30px 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        #bulb2Division {
+            display: none;
+            width: 100%;
+            padding: 30px 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style = "color:white;">Smart-Lighting System</h1>
+    <p style = "color:white;">Select a bulb from the following options:</p>
+    <button onclick="RoomLights()">Room Bulb</button>
+    <button onclick="DiscoLights()">Disco Bulb</button>
+
+
+    <div id="RoomLightsDiv">
+        <h2 style = "color:white;">Smart-Bulb for room.</h2>
+        <p style = "color:white;">Click on the buttons to turn on/off the bulb.</p>
+        <button onclick="RoomColors()">Turn on</button>
+        <!-- Displays the buttons to control the color of light emitted by bulb-->
+
+        <img id="Bulb1" src="images/bulb1/off.png" style="width:100px">
+        <button onclick="document.getElementById('Bulb1').src='images/bulb1/off.png'">Turn off</button>
+
+        <div id="bulb1Division">
+            <button style="background-color: white;"
+                onclick="document.getElementById('Bulb1').src='images/bulb1/white.png'">White light</button>
+            <button style="background-color: rgb(243, 243, 89);"
+                onclick="document.getElementById('Bulb1').src='images/bulb1/yellow.png'">Yellow
+                light</button>
+            <button style="background-color: rgb(243, 199, 89);"
+                onclick="document.getElementById('Bulb1').src='images/bulb1/golden.png'">Warm yellow
+                light</button>
+        </div>
+    </div>
+
+    <div id="DiscoLightsDiv">
+        <h2 style = "color:white;">Smart-Bulb for disco lights.</h2>
+        <p style = "color:white;">Click on the buttons to turn on/off the bulb.</p>
+        <button onclick="DiscoColors()">Turn on</button>
+        <!-- Displays the buttons to control the color of light emitted by bulb-->
+
+        <img id="Bulb2" src="images/bulb2/off.png" style="width:100px">
+        <button onclick="document.getElementById('Bulb2').src='images/bulb2/off.png'">Turn off</button>
+
+        <div id="bulb2Division">
+            <button style="background-color: rgb(200, 71, 71);color: white;"
+                onclick="document.getElementById('Bulb2').src='images/bulb2/red.png'">Red light</button>
+            <button style="background-color: rgb(42, 95, 59);color: white;"
+                onclick="document.getElementById('Bulb2').src='images/bulb2/green.png'">Green light</button>
+            <button style="background-color: rgb(40, 56, 201);color: white;"
+                onclick="document.getElementById('Bulb2').src='images/bulb2/blue.png'">Blue light</button>
+        </div>
+    </div>
+
+    <script>
+        function RoomLights() {
+            var x = document.getElementById("RoomLightsDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function DiscoLights() {
+            var x = document.getElementById("DiscoLightsDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function RoomColors() {
+            var x = document.getElementById("bulb1Division");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function DiscoColors() {
+            var x = document.getElementById("bulb2Division");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
